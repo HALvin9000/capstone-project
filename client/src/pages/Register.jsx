@@ -1,16 +1,14 @@
 import Navbar from "../components/Navbar";
 
-function Home({setPage}) {
+function Register({setPage}) {
   return (
     <>
       <div className="default">
         <Navbar setPage={setPage} />
 
-        <h1>Home Page</h1>
+        <h1>Register Page</h1>
 
-        <p className="home-text">
-          Welcome to the QuickStart Hardware Store.<br />The store, near you.
-        </p>
+        <p>Add a form linked to the database</p>
 
         <footer>
           <p>Trademark of QuickStart Hardware Corp.</p>
@@ -20,4 +18,4 @@ function Home({setPage}) {
   );
 }
 
-export default Home;
+export default Register;
