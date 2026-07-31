@@ -9,7 +9,10 @@ function Home({setPage}) {
         <h1>Home Page</h1>
 
         <p className="home-text">
-          Welcome to the QuickStart Hardware Store.<br />The store, near you.
+          *Fix the Login button bug. It should be deleted across navbar, app.js but its still lingering??<br />
+          *Fix the navbar color being stuck on cyan despite navbar.css setting it to slategray.
+          *Maybe move this to an exclusive bug/TODO page to the navbar to not pollute the home page.
+          *Most things right now are WIP hardcoded implementations to build structure without much styling or reusable/clean code.
         </p>
 
         <footer>
