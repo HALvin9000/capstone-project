@@ -1,8 +1,6 @@
 function Form() {
   return (
     <form>
-      <h2>Sign In</h2>
-      
       <div>
         <label>Email:</label>
         <input type="email" />

@@ -12,10 +12,19 @@ function CardPage({setPage}) {
         <Card
           title="Test Card"
           description="Some description."
-        /> 
+          stock="Some amount of quantity."
+          price="Some price."
+        />
+
+        <Card
+          title="RTX Pro 6000"
+          description="96 GB of GDDR7"
+          stock="1"
+          price="$8000"
+        />
 
         <footer>
-          <p>Trademark of QuickStart Hardware Corp.</p>
+          <p>Trademark of QuickRental Corp.</p>
         </footer>
       </div>
     </>

@@ -1,6 +1,17 @@
 .navbar {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   padding: 10px;
   background-color: slategray;
+}
+
+.nav-left {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
 }

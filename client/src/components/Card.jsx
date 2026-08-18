@@ -1,9 +1,11 @@
-function Card({title, description}) {
+function Card({title, description, stock, price}) {
   return (
     <div className="card">
       <h2>{title}</h2>
       <p>{description}</p>
-      <button>More</button>
+      <p>{stock}</p>
+      <p>{price}</p>
+      <button>Rent</button>
     </div>
   );
 }

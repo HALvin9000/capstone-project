@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar";
 import Form from "../components/Form";
 
-function Register({setPage}) {
+function SignIn({setPage}) {
   return (
     <>
       <div className="default">
         <Navbar setPage={setPage} />
 
-        <h1>Register Page</h1>
+        <h1>Sign In Page</h1>
 
         <p>Add a form linked to the database<br /><br />
           *consider erasing Register page and placing the option in the Sign In page like some websites do</p>
@@ -22,4 +22,4 @@ function Register({setPage}) {
   );
 }
 
-export default Register;
+export default SignIn;
