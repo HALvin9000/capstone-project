@@ -3,6 +3,10 @@
   gap: 5px;
   padding: 10px;
   background-color: slategray;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-left {

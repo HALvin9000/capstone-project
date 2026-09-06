@@ -1,24 +1,26 @@
 import Navbar from "../components/Navbar";
+import "./Home.css";
 
 function Home({setPage}) {
   return (
-    <>
-      <div className="default">
-        <Navbar setPage={setPage} />
+    <div>
+      <Navbar setPage={setPage} />
 
+      <section className="home-hero">
         <p>Technology Rentals Without The Commitment</p>
 
-        <h1>
+        <h1 className="home-slogan">
           Need a Computer?
           <br />
           Just Rent One.
         </h1>
 
         <p>
-          No big purchase. No long-term commitment. No hassle. QuickRental gives you
-          access to the technology you need, exactly when you need it.
+          No big purchase. No long-term commitment. No hassle.
         </p>
+      </section>
 
+      <section>
         <h2>Whatever You're Working On, We've Got the Gear.</h2>
 
         <p>
@@ -111,12 +113,12 @@ function Home({setPage}) {
         <p>
           Get the technology you need without the cost and commitment of owning it.
         </p>
+      </section>
 
-        <footer>
-          <p>Trademark of QuickRental Corp.</p>
-        </footer>
-      </div>
-    </>
+      <footer>
+        <p>Trademark of QuickRental Corp.</p>
+      </footer>
+    </div>
   );
 }
 
