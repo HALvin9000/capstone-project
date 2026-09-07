@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 
-function CardPage({setPage}) {
+function CardPage({}) {
   return (
     <>
       <div className="default">
-        <Navbar setPage={setPage} />
 
         <h1>Card Page</h1>
 

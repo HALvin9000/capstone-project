@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
 import Form from "../components/Form";
 
-function SignIn({setPage}) {
+function SignIn({}) {
   return (
     <>
       <div className="default">
-        <Navbar setPage={setPage} />
 
         <h1>Sign In Page</h1>
 

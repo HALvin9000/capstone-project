@@ -1,10 +1,7 @@
-import Navbar from "../components/Navbar";
-
-function About({setPage}) {
+function About({}) {
   return (
     <>
       <div className="default">
-        <Navbar setPage={setPage} />
 
         <h1>About Page</h1>
 

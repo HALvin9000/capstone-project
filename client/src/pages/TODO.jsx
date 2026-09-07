@@ -1,10 +1,7 @@
-import Navbar from "../components/Navbar";
-
-function TODO({setPage}) {
+function TODO({}) {
   return (
     <>
       <div className="default">
-        <Navbar setPage={setPage} />
 
         <p>
           *Most things right now are WIP hardcoded implementations to build structure without much styling or reusable/clean code.<br />

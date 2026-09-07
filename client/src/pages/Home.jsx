@@ -1,10 +1,8 @@
-import Navbar from "../components/Navbar";
 import "./Home.css";
 
-function Home({setPage}) {
+function Home({}) {
   return (
     <div>
-      <Navbar setPage={setPage} />
 
       <section className="home-hero">
         <p>Technology Rentals Without The Commitment</p>

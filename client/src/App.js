@@ -1,4 +1,6 @@
 import {useState} from "react";
+import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import CardPage from "./pages/CardPage";
@@ -11,6 +13,8 @@ function App() {
 
   return (
     <div>
+      <Navbar setPage={setPage} />
+
       {page === "home" && <Home setPage={setPage} />}
       {page === "about" && <About setPage={setPage} />}
       {page === "cardpage" && <CardPage setPage={setPage} />}

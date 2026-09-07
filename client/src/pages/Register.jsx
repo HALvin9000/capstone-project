@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
 import Form from "../components/Form";
 
-function Register({setPage}) {
+function Register({}) {
   return (
     <>
       <div className="default">
-        <Navbar setPage={setPage} />
 
         <h1>Register Page</h1>
 
