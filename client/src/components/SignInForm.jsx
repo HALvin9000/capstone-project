@@ -1,4 +1,5 @@
 import axios from 'axios'
+import './SignInForm.css'
 
 function SignInForm() {
 
@@ -14,18 +15,20 @@ function SignInForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
+        <form className="signin-form" onSubmit={handleSubmit}>
+
+            <div className="form-group">
                 <label>Username:</label>
                 <input type="text" name="uname" required />
             </div>
 
-            <div>
+            <div className="form-group">
                 <label>Password:</label>
                 <input type="password" name="password" required />
             </div>
 
             <button type="submit">Sign In</button>
+
         </form>
     )
 }

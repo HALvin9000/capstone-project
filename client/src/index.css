@@ -16,3 +16,7 @@ code {
 html {
   scrollbar-gutter: stable;
 }
+
+footer {
+  margin-top: auto;
+}

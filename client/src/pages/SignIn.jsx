@@ -7,9 +7,6 @@ function SignIn({}) {
 
         <h1>Sign In Page</h1>
 
-        <p>Add a form linked to the database<br /><br />
-          *consider erasing Register page and placing the option in the Sign In page like some websites do</p>
-
         <SignInForm /> 
 
         <footer>

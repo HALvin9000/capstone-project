@@ -1,4 +1,5 @@
 import axios from 'axios'
+import './RegisterForm.css'
 
 function RegisterForm() {
 
@@ -18,38 +19,40 @@ function RegisterForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>First Name:</label>
+        <form className="register-form" onSubmit={handleSubmit}>
+
+            <div className="form-group">
+                <label>First Name</label>
                 <input type="text" name="fname" />
             </div>
 
-            <div>
-                <label>Last Name:</label>
+            <div className="form-group">
+                <label>Last Name</label>
                 <input type="text" name="lname" />
             </div>
 
-            <div>
-                <label>Username:</label>
+            <div className="form-group">
+                <label>Username</label>
                 <input type="text" name="uname" />
             </div>
 
-            <div>
-                <label>Password:</label>
+            <div className="form-group">
+                <label>Password</label>
                 <input type="password" name="password" />
             </div>
 
-            <div>
-                <label>Email:</label>
+            <div className="form-group">
+                <label>Email</label>
                 <input type="email" name="email" />
             </div>
 
-            <div>
-                <label>Age:</label>
+            <div className="form-group">
+                <label>Age</label>
                 <input type="number" name="age" min="0" />
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Create Account</button>
+
         </form>
     )
 }
