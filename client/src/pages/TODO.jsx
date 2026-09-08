@@ -11,6 +11,7 @@ function TODO({}) {
           *duplicated forms for register/signin as I don't know how to make it modular
           *Installed bootstrap but turns out its global and not component based so it ruins my styling. Was going to use their cards and forms. Have to make my own...
           *a log out and something that shows you're logged in whether that be a colored dot or writing it on the navbar
+          *fill out the readme and think about how to add the AI feature
         </p>
 
         <footer>
