@@ -1,4 +1,4 @@
-import Form from "../components/Form";
+import SignInForm from "../components/SignInForm";
 
 function SignIn({}) {
   return (
@@ -10,7 +10,7 @@ function SignIn({}) {
         <p>Add a form linked to the database<br /><br />
           *consider erasing Register page and placing the option in the Sign In page like some websites do</p>
 
-        <Form /> 
+        <SignInForm /> 
 
         <footer>
           <p>Trademark of QuickRental Corp.</p>
@@ -20,4 +20,4 @@ function SignIn({}) {
   );
 }
 
-export default SignIn;
+export default SignIn

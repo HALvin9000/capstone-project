@@ -8,6 +8,7 @@ function TODO({}) {
           *Set up the css margins universally on html tag
           *fix footer so its always bottom
           *make cards work and connect to mongoDB
+          *duplicated forms for register/signin as I don't know how to make it modular
         </p>
 
         <footer>

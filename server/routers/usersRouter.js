@@ -13,4 +13,14 @@ router.post("/", async (req, res)=> {
     res.send(user)
 })
 
+router.post("/login", async (req, res) => {
+    const user = await users.findOne(req.body)
+
+    if (!user) {
+        return res.send("Invalid username or password")
+    }
+
+    res.send(user)
+})
+
 export default router;

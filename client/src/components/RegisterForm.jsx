@@ -46,7 +46,7 @@ function Form() {
 
             <div>
                 <label>Age:</label>
-                <input type="number" name="age" />
+                <input type="number" name="age" min="0" />
             </div>
 
             <button type="submit">Submit</button>
