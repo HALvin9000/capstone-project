@@ -12,6 +12,7 @@ function TODO({}) {
           *Installed bootstrap but turns out its global and not component based so it ruins my styling. Was going to use their cards and forms. Have to make my own...
           *a log out and something that shows you're logged in whether that be a colored dot or writing it on the navbar
           *fill out the readme and think about how to add the AI feature
+          *consider erasing Register page and placing the option in the Sign In page like some websites do
         </p>
 
         <footer>
