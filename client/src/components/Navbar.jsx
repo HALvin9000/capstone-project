@@ -4,15 +4,15 @@ function Navbar({setPage}) {
   return (
     <nav className="navbar">
         <div className="nav-left">
-            <button onClick={() => setPage("home")}>Home</button>
-            <button onClick={() => setPage("about")}>About</button>
-            <button onClick={() => setPage("product")}>Product</button>
+            <a href="Home.jsx">Home</a>
+            <a href="About.jsx">About</a>
+            <a href="Product.jsx">Product</a>
         </div>
 
         <div className="nav-right">
-            <button onClick={() => setPage("TODO")}>TODO</button>
-            <button onClick={() => setPage("register")}>Register</button>
-            <button onClick={() => setPage("signin")}>Sign In</button>
+            <a href="TODO.jsx">TODO</a>
+            <a href="Register.jsx">Register</a>
+            <a href="SignIn.jsx">Sign In</a>
         </div>
     </nav>
   );
