@@ -9,6 +9,7 @@ function TODO({}) {
           *fix footer so its always bottom
           *make cards work and connect to mongoDB
           *duplicated forms for register/signin as I don't know how to make it modular
+          *Installed bootstrap but turns out its global and not component based so it ruins my styling. Was going to use their cards and forms. Have to make my own...
         </p>
 
         <footer>

@@ -6,7 +6,7 @@ function Navbar({setPage}) {
         <div className="nav-left">
             <button onClick={() => setPage("home")}>Home</button>
             <button onClick={() => setPage("about")}>About</button>
-            <button onClick={() => setPage("cardpage")}>CardPage</button>
+            <button onClick={() => setPage("product")}>Product</button>
         </div>
 
         <div className="nav-right">

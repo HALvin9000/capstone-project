@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import connectToDB from './dbConnection.js'
 import usersRouter from './routers/usersRouter.js'
+import cardsRouter from './routers/cardsRouter.js'
 
 const server = express()
 server.use(cors())
@@ -10,6 +11,7 @@ server.use(express.json())
 connectToDB()
 
 server.use("/users", usersRouter)
+server.use("/cards", cardsRouter)
 
 server.get("/", (req, res) => {
     res.send("This is the server")

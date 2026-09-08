@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-function Form() {
+function RegisterForm() {
 
     async function handleSubmit(event) {
         event.preventDefault()
@@ -54,4 +54,4 @@ function Form() {
     )
 }
 
-export default Form
+export default RegisterForm
