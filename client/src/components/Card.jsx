@@ -2,22 +2,29 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import "./Card.css"
 
-function Card({addToCart, cards: cardsProp, removeFromCart}) {
+function Card() {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
-        if (cardsProp) {
-            setCards(cardsProp)
-            return
-        }
-
         async function getCards() {
             let response = await axios.get("http://localhost:4000/cards/")
             setCards(response.data)
         }
 
         getCards()
-    }, [cardsProp])
+    }, [])
+
+    async function rentCard(card) {
+        try {
+            await axios.post("http://localhost:4000/orders/", {
+                cardId: card._id
+            })
+
+            alert("Item rented!")
+        } catch (error) {
+            console.error("Error renting item:", error)
+        }
+    }
 
     return (
         <div className="card-container">
@@ -27,18 +34,10 @@ function Card({addToCart, cards: cardsProp, removeFromCart}) {
                     <p>{card.description}</p>
                     <p>Stock: {card.stock}</p>
                     <p>${card.price}</p>
-                    
-                    {addToCart && (
-                        <button onClick={() => addToCart(card)}>
-                            Rent
-                        </button>
-                    )}
 
-                    {removeFromCart && (
-                        <button onClick={() => removeFromCart(card._id)}>
-                            Remove
-                        </button>
-                    )}
+                    <button onClick={() => rentCard(card)}>
+                        Rent
+                    </button>
                 </div>
             ))}
         </div>

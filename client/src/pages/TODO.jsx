@@ -13,6 +13,7 @@ function TODO({}) {
           *a log out and something that shows you're logged in whether that be a colored dot or writing it on the navbar
           *fill out the readme and think about how to add the AI feature
           *consider erasing Register page and placing the option in the Sign In page like some websites do
+          *MyCart.jsx feels like it duplicated Card.jsx code so the design definitely can be improved
         </p>
 
         <footer>
