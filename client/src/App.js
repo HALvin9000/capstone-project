@@ -29,13 +29,10 @@ function App() {
 
       {page === "home" && <Home setPage={setPage} />}
       {page === "about" && <About setPage={setPage} />}
-
       {page === "product" && (
         <Product setPage={setPage} addToCart={addToCart} />
       )}
-
       {page === "TODO" && <TODO setPage={setPage} />}
-
       {page === "mycart" && (
         <MyCart
           setPage={setPage}
@@ -43,7 +40,6 @@ function App() {
           removeFromCart={removeFromCart}
         />
       )}
-      
       {page === "register" && <Register setPage={setPage} />}
       {page === "signin" && <SignIn setPage={setPage} />}
     </div>

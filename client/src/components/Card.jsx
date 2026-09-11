@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import "./Card.css"
 
-function Card({addToCart, cards: cardsProp}) {
+function Card({addToCart, cards: cardsProp, removeFromCart}) {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
@@ -31,6 +31,12 @@ function Card({addToCart, cards: cardsProp}) {
                     {addToCart && (
                         <button onClick={() => addToCart(card)}>
                             Rent
+                        </button>
+                    )}
+
+                    {removeFromCart && (
+                        <button onClick={() => removeFromCart(card._id)}>
+                            Remove
                         </button>
                     )}
                 </div>
