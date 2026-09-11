@@ -1,18 +1,23 @@
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 import axios from "axios"
 import "./Card.css"
 
-function Card() {
+function Card({addToCart, cards: cardsProp}) {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
+        if (cardsProp) {
+            setCards(cardsProp)
+            return
+        }
+
         async function getCards() {
             let response = await axios.get("http://localhost:4000/cards/")
             setCards(response.data)
         }
 
         getCards()
-    }, [])
+    }, [cardsProp])
 
     return (
         <div className="card-container">
@@ -22,7 +27,12 @@ function Card() {
                     <p>{card.description}</p>
                     <p>Stock: {card.stock}</p>
                     <p>${card.price}</p>
-                    <button>Rent</button>
+                    
+                    {addToCart && (
+                        <button onClick={() => addToCart(card)}>
+                            Rent
+                        </button>
+                    )}
                 </div>
             ))}
         </div>

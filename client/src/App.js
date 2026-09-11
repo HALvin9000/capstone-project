@@ -11,6 +11,17 @@ import SignIn from "./pages/SignIn";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart((currentCart) => [...currentCart, product]);
+  };
+
+  const removeFromCart = (id) => {
+    setCart((currentCart) =>
+      currentCart.filter((item) => item._id !== id)
+    );
+  };
 
   return (
     <div>
@@ -18,9 +29,21 @@ function App() {
 
       {page === "home" && <Home setPage={setPage} />}
       {page === "about" && <About setPage={setPage} />}
-      {page === "product" && <Product setPage={setPage} />}
+
+      {page === "product" && (
+        <Product setPage={setPage} addToCart={addToCart} />
+      )}
+
       {page === "TODO" && <TODO setPage={setPage} />}
-      {page === "mycart" && <MyCart setPage={setPage} />}
+
+      {page === "mycart" && (
+        <MyCart
+          setPage={setPage}
+          cart={cart}
+          removeFromCart={removeFromCart}
+        />
+      )}
+      
       {page === "register" && <Register setPage={setPage} />}
       {page === "signin" && <SignIn setPage={setPage} />}
     </div>

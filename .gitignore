@@ -5,10 +5,6 @@ node_modules/
 /.pnp
 .pnp.js
 
-# postman
-.postman/
-postman/
-
 # testing
 /coverage
 
