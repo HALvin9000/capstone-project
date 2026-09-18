@@ -1,17 +1,20 @@
 import axios from 'axios'
 import './SignInForm.css'
 
-function SignInForm() {
+function SignInForm({setUser, setPage}) {
 
     async function handleSubmit(event) {
         event.preventDefault()
 
-        let response = await axios.post("http://localhost:4000/users/", {
+        let response = await axios.post("http://localhost:4000/users/login", {
             uname: event.target.uname.value,
             password: event.target.password.value,
         })
 
         console.log(response)
+
+        setUser(response.data)
+        setPage("home")
     }
 
     return (

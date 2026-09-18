@@ -11,10 +11,15 @@ import SignIn from "./pages/SignIn";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [user, setUser] = useState(null);
 
   return (
     <div>
-      <Navbar setPage={setPage} />
+      <Navbar
+        setPage={setPage}
+        user={user}
+        setUser={setUser}
+      />
 
       {page === "home" && <Home setPage={setPage} />}
       {page === "about" && <About setPage={setPage} />}
@@ -22,7 +27,12 @@ function App() {
       {page === "TODO" && <TODO setPage={setPage} />}
       {page === "mycart" && <MyCart setPage={setPage} />}
       {page === "register" && <Register setPage={setPage} />}
-      {page === "signin" && <SignIn setPage={setPage} />}
+      {page === "signin" && (
+        <SignIn
+          setPage={setPage}
+          setUser={setUser}
+        />
+      )}
     </div>
   );
 }

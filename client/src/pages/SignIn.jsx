@@ -1,13 +1,13 @@
 import SignInForm from "../components/SignInForm";
 
-function SignIn({}) {
+function SignIn({setUser, setPage}) {
   return (
     <>
       <div className="default">
 
         <h1>Sign In Page</h1>
 
-        <SignInForm /> 
+        <SignInForm setUser={setUser} setPage={setPage} />
 
         <footer>
           <p>Trademark of QuickRental Corp.</p>
