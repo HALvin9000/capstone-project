@@ -4,13 +4,17 @@ import orders from "../models/orders.js"
 const router = express.Router()
 
 router.get("/", async (req, res) => {
-    const data = await orders.find().populate("cardId")
+    const data = await orders
+        .find({ uname: req.query.uname })
+        .populate("cardId")
+
     res.send(data)
 })
 
 router.post("/", async (req, res) => {
     const order = await orders.create({
-        cardId: req.body.cardId
+        cardId: req.body.cardId,
+        uname: req.body.uname
     })
 
     const populatedOrder = await order.populate("cardId")

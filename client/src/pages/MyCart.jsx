@@ -2,17 +2,24 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import "./../components/Card.css"
 
-function MyCart() {
+function MyCart({user}) {
     const [orders, setOrders] = useState([])
 
-    useEffect(() => {
-        async function getOrders() {
-            const response = await axios.get("http://localhost:4000/orders/")
+            useEffect(() => {
+                async function getOrders() {
+                    if (!user) {
+                        return
+                    }
+
+            const response = await axios.get(
+                `http://localhost:4000/orders/?uname=${user.uname}`
+            )
+
             setOrders(response.data)
         }
 
         getOrders()
-    }, [])
+    }, [user])
 
     async function removeOrder(id) {
         await axios.delete(`http://localhost:4000/orders/${id}`)

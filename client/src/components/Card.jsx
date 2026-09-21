@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import "./Card.css"
 
-function Card() {
+function Card({user}) {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
@@ -17,7 +17,8 @@ function Card() {
     async function rentCard(card) {
         try {
             await axios.post("http://localhost:4000/orders/", {
-                cardId: card._id
+                cardId: card._id,
+                uname: user.uname
             })
 
             alert("Item rented!")

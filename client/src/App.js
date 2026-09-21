@@ -11,26 +11,35 @@ import SignIn from "./pages/SignIn";
 
 function App() {
   const [page, setPage] = useState("home");
-  const [user, setUser] = useState(null);
+
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem("user")
+    return savedUser ? JSON.parse(savedUser) : null
+  });
+
+  function handleSetUser(user) {
+    setUser(user)
+    localStorage.setItem("user", JSON.stringify(user))
+  }
 
   return (
     <div>
       <Navbar
         setPage={setPage}
         user={user}
-        setUser={setUser}
+        setUser={handleSetUser}
       />
 
       {page === "home" && <Home setPage={setPage} />}
       {page === "about" && <About setPage={setPage} />}
-      {page === "product" && <Product setPage={setPage} />}
+      {page === "product" && <Product setPage={setPage} user={user} />}
       {page === "TODO" && <TODO setPage={setPage} />}
-      {page === "mycart" && <MyCart setPage={setPage} />}
+      {page === "mycart" && <MyCart setPage={setPage} user={user} />}
       {page === "register" && <Register setPage={setPage} />}
       {page === "signin" && (
         <SignIn
           setPage={setPage}
-          setUser={setUser}
+          setUser={handleSetUser}
         />
       )}
     </div>

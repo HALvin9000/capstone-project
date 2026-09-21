@@ -5,6 +5,10 @@ const orderSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "cards",
         required: true
+    },
+    uname: {
+        type: String,
+        required: true
     }
 })
 
