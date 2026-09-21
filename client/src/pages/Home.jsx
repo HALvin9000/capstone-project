@@ -18,7 +18,7 @@ function Home({}) {
         </p>
       </section>
 
-      <section>
+      <section className="home-content">
         <h2>Whatever You're Working On, We've Got the Gear.</h2>
 
         <p>

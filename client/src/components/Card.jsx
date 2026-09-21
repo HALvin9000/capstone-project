@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import "./Card.css"
 
-function Card({user}) {
+function Card({user, setPage}) {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
@@ -15,6 +15,11 @@ function Card({user}) {
     }, [])
 
     async function rentCard(card) {
+        if (!user) {
+            setPage("signin")
+            return
+        }
+
         try {
             await axios.post("http://localhost:4000/orders/", {
                 cardId: card._id,

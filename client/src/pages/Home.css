@@ -19,3 +19,16 @@
   font-size: 64px;
   font-weight: bold;
 }
+
+.home-content {
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: lightcyan;
+  color: #222;
+  text-align: center;
+}
+
+.home-content p {
+  line-height: 1.6;
+}

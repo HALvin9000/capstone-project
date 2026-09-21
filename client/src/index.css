@@ -16,3 +16,20 @@ code {
 html {
   scrollbar-gutter: stable;
 }
+
+.default {
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: lightcyan;
+  color: #222;
+}
+
+.default h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.default p {
+  line-height: 1.6;
+}
