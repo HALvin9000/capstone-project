@@ -1,6 +1,6 @@
 import "./Navbar.css";
 
-function Navbar({ setPage, user, setUser }) {
+function Navbar({setPage, user, setUser}) {
   return (
     <nav
       className="navbar sticky-top"
@@ -8,7 +8,7 @@ function Navbar({ setPage, user, setUser }) {
     >
       <div className="container-fluid">
 
-        {/* Left side */}
+        {/* Left Side */}
         <div className="d-flex gap-1">
           <a
             className="nav-link text-light"
@@ -35,7 +35,7 @@ function Navbar({ setPage, user, setUser }) {
           </a>
         </div>
 
-        {/* Right side */}
+        {/* Right Side */}
         <div className="ms-auto d-flex align-items-center gap-1">
           <a
             className="nav-link text-light"
