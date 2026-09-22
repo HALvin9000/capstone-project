@@ -113,7 +113,7 @@ function Home({}) {
         </p>
       </section>
 
-      <footer>
+      <footer className="home-footer">
         <p>Trademark of QuickRental Corp.</p>
       </footer>
     </div>

@@ -1,25 +1,9 @@
-html {
-  overflow-y: scroll;
+.nav-link {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
-.navbar {
-  display: flex;
-  gap: 5px;
-  padding: 10px;
-  background-color: slategray;
-
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-left {
-  display: flex;
-  gap: 10px;
-}
-
-.nav-right {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
+.nav-link:hover {
+  border-color: white;
 }

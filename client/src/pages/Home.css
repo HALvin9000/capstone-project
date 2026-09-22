@@ -32,3 +32,10 @@
 .home-content p {
   line-height: 1.6;
 }
+
+.home-footer {
+  background-color: lightcyan;
+  color: #222;
+  text-align: left;
+  padding: 40px;
+}
