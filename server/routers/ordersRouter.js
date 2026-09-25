@@ -14,7 +14,8 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
     const order = await orders.create({
         cardId: req.body.cardId,
-        uname: req.body.uname
+        uname: req.body.uname,
+        quantity: req.body.quantity
     })
 
     const populatedOrder = await order.populate("cardId")

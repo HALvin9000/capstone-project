@@ -4,6 +4,7 @@ import "./Card.css"
 
 function Card({user, setPage}) {
     const [cards, setCards] = useState([])
+    const [quantity, setQuantity] = useState(1)
 
     useEffect(() => {
         async function getCards() {
@@ -23,7 +24,8 @@ function Card({user, setPage}) {
         try {
             await axios.post("http://localhost:4000/orders/", {
                 cardId: card._id,
-                uname: user.uname
+                uname: user.uname,
+                quantity: quantity
             })
 
             alert("Item rented!")
@@ -40,6 +42,14 @@ function Card({user, setPage}) {
                     <p>{card.description}</p>
                     <p>Stock: {card.stock}</p>
                     <p>${card.price}</p>
+
+                    <input
+                        type="number"
+                        min="1"
+                        max={card.stock}
+                        value={quantity}
+                        onChange={(e) => setQuantity(Number(e.target.value))}
+                    />
 
                     <button onClick={() => rentCard(card)}>
                         Rent

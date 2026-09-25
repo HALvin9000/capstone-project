@@ -4,8 +4,11 @@ import connectToDB from './dbConnection.js'
 import usersRouter from './routers/usersRouter.js'
 import cardsRouter from './routers/cardsRouter.js'
 import ordersRouter from './routers/ordersRouter.js'
+import dotenv from 'dotenv'
 
 const server = express()
+dotenv.config();
+
 server.use(cors())
 server.use(express.json())
 

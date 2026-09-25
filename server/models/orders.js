@@ -9,6 +9,10 @@ const orderSchema = mongoose.Schema({
     uname: {
         type: String,
         required: true
+    },
+    quantity: {
+        type: Number,
+        required: true
     }
 })
 
