@@ -6,7 +6,11 @@ const userSchema = mongoose.Schema({
     uname: String,
     password: String,
     email: String,
-    age: Number
+    age: Number,
+    registeredAt: {
+        type: Date,
+        default: Date.now
+    }
 })
 
 const users = mongoose.model("users", userSchema)

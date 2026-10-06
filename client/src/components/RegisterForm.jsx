@@ -1,7 +1,7 @@
 import axios from 'axios'
 import './RegisterForm.css'
 
-function RegisterForm() {
+function RegisterForm({setUser, setPage}) {
 
     async function handleSubmit(event) {
         event.preventDefault()
@@ -16,6 +16,9 @@ function RegisterForm() {
         })
 
         console.log(response)
+
+        setUser(response.data)
+        setPage("home")
     }
 
     return (

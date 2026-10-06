@@ -11,7 +11,7 @@ function Navbar({setPage, user, setUser}) {
         {/* Left Side */}
         <div className="d-flex gap-1">
           <a
-            className="nav-link text-light"
+            className="custom-nav-link text-light"
             href="#home"
             onClick={() => setPage("home")}
           >
@@ -19,7 +19,7 @@ function Navbar({setPage, user, setUser}) {
           </a>
 
           <a
-            className="nav-link text-light"
+            className="custom-nav-link text-light"
             href="#about"
             onClick={() => setPage("about")}
           >
@@ -27,7 +27,7 @@ function Navbar({setPage, user, setUser}) {
           </a>
 
           <a
-            className="nav-link text-light"
+            className="custom-nav-link text-light"
             href="#product"
             onClick={() => setPage("product")}
           >
@@ -38,7 +38,7 @@ function Navbar({setPage, user, setUser}) {
         {/* Right Side */}
         <div className="ms-auto d-flex align-items-center gap-1">
           <a
-            className="nav-link text-light"
+            className="custom-nav-link text-light"
             href="#TODO"
             onClick={() => setPage("TODO")}
           >
@@ -46,7 +46,7 @@ function Navbar({setPage, user, setUser}) {
           </a>
 
           <a
-            className="nav-link text-light"
+            className="custom-nav-link text-light"
             href="#mycart"
             onClick={() => setPage("mycart")}
           >
@@ -61,7 +61,7 @@ function Navbar({setPage, user, setUser}) {
 
           {user ? (
             <button
-              className="nav-link text-light"
+              className="custom-nav-link text-light"
               style={{ border: "none", background: "none" }}
               onClick={() => {
                 setUser(null);
@@ -73,7 +73,7 @@ function Navbar({setPage, user, setUser}) {
           ) : (
             <>
               <a
-                className="nav-link text-light"
+                className="custom-nav-link text-light"
                 href="#register"
                 onClick={() => setPage("register")}
               >
@@ -81,7 +81,7 @@ function Navbar({setPage, user, setUser}) {
               </a>
 
               <a
-                className="nav-link text-light"
+                className="custom-nav-link text-light"
                 href="#signin"
                 onClick={() => setPage("signin")}
               >

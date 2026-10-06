@@ -1,17 +1,22 @@
 import mongoose from "mongoose"
 
 const orderSchema = mongoose.Schema({
-    cardId: {
+    productId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "cards",
+        ref: "products",
         required: true
     },
-    uname: {
-        type: String,
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "users",
         required: true
     },
     quantity: {
         type: Number,
+        required: true
+    },
+    expiresAt: {
+        type: Date,
         required: true
     }
 })

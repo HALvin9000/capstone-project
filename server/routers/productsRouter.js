@@ -1,16 +1,16 @@
 import express from 'express'
-import cards from '../models/cards.js'
+import products from '../models/products.js'
 
 const router = express.Router()
 
 router.get("/", async (req, res)=> {
-    const data = await cards.find()
+    const data = await products.find()
     res.send(data)
 })
 
 router.post("/", async (req, res)=> {
-    const card = await cards.create(req.body)
-    res.send(card)
+    const product = await products.create(req.body)
+    res.send(product)
 })
 
 export default router;

@@ -1,9 +1,10 @@
-.nav-link {
+.custom-nav-link {
   border: 1px solid transparent;
   border-radius: 5px;
   padding: 5px 10px;
+  text-decoration: none;
 }
 
-.nav-link:hover {
+.custom-nav-link:hover {
   border-color: white;
 }

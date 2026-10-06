@@ -1,0 +1,72 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.product {
+    width: 440px;
+    height: 660px;
+    box-sizing: border-box;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    background: white;
+}
+
+.product .card-img-top {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.product .card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product h2 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.product p {
+    font-size: 18px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.total-price {
+    font-size: 24px !important;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.quantity-input {
+    width: 100px;
+    height: 38px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.rent-button {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px;
+    font-size: 18px;
+}
+
+/* Empty space in MyCart */
+.quantity-placeholder {
+    width: 100px;
+    height: 38px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

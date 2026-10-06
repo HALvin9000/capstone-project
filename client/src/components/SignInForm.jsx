@@ -6,15 +6,20 @@ function SignInForm({setUser, setPage}) {
     async function handleSubmit(event) {
         event.preventDefault()
 
-        let response = await axios.post("http://localhost:4000/users/login", {
-            uname: event.target.uname.value,
-            password: event.target.password.value,
-        })
+        try {
+            let response = await axios.post("http://localhost:4000/users/login", {
+                uname: event.target.uname.value,
+                password: event.target.password.value,
+            })
 
-        console.log(response)
+            console.log(response)
 
-        setUser(response.data)
-        setPage("home")
+            setUser(response.data)
+            setPage("home")
+
+        } catch (error) {
+            alert(error.response.data.message)
+        }
     }
 
     return (

@@ -1,4 +1,4 @@
-import Card from "../components/Card"
+import ProductCard from "../components/ProductCard"
 
 function Product({user, setPage}) {
     return (
@@ -6,11 +6,12 @@ function Product({user, setPage}) {
 
             <h1>Product Page</h1>
 
-            <Card user={user} setPage={setPage} />
+            <ProductCard user={user} setPage={setPage} />
 
             <footer>
                 <p>Trademark of QuickRental Corp.</p>
             </footer>
+
         </div>
     )
 }

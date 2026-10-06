@@ -1,5 +1,6 @@
 import {useState} from "react";
 import Navbar from "./components/Navbar";
+import ChatWidget from "./components/ChatWidget";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -35,13 +36,22 @@ function App() {
       {page === "product" && <Product setPage={setPage} user={user} />}
       {page === "TODO" && <TODO setPage={setPage} />}
       {page === "mycart" && <MyCart setPage={setPage} user={user} />}
-      {page === "register" && <Register setPage={setPage} />}
+
+      {page === "register" && (
+        <Register
+          setPage={setPage}
+          setUser={handleSetUser}
+        />
+      )}
+
       {page === "signin" && (
         <SignIn
           setPage={setPage}
           setUser={handleSetUser}
         />
       )}
+
+      <ChatWidget />
     </div>
   );
 }
