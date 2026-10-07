@@ -68,10 +68,6 @@ function About({}) {
           <strong>Need a computer? We’re here to help.</strong> Contact us today
           to find the right rental solution for you.
         </p>
-
-        <footer>
-          <p>Trademark of QuickRental Corp.</p>
-        </footer>
       </div>
     </>
   );

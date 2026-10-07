@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import "./../components/ProductCard.css"
 
-function MyCart({ user }) {
+function MyCart({user}) {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
@@ -84,7 +84,12 @@ function MyCart({ user }) {
                                     ).toFixed(2)}
                                 </p>
 
-                                <div className="quantity-placeholder"></div>
+                                <div className="expiration">
+                                    Expires:{" "}
+                                    {new Date(
+                                        order.expiresAt
+                                    ).toLocaleDateString()}
+                                </div>
 
                                 <button
                                     className="btn btn-danger mt-auto"
@@ -100,11 +105,6 @@ function MyCart({ user }) {
                     ))}
                 </div>
             )}
-
-            <footer>
-                <p>Trademark of QuickRental Corp.</p>
-            </footer>
-
         </div>
     )
 }

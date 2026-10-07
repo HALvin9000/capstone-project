@@ -7,10 +7,6 @@ function SignIn({setUser, setPage}) {
       <h1>Sign In Page</h1>
 
       <SignInForm setUser={setUser} setPage={setPage} />
-
-      <footer>
-        <p>Trademark of QuickRental Corp.</p>
-      </footer>
     </div>
   );
 }

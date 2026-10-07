@@ -70,3 +70,11 @@
     margin-top: 10px;
     margin-bottom: 15px;
 }
+
+.expiration {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    color: red;
+    margin-bottom: 25px;
+}

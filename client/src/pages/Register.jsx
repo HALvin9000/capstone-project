@@ -11,10 +11,6 @@ function Register({setUser, setPage}) {
           setUser={setUser}
           setPage={setPage}
         />
-
-        <footer>
-          <p>Trademark of QuickRental Corp.</p>
-        </footer>
       </div>
     </>
   );

@@ -7,11 +7,6 @@ function Product({user, setPage}) {
             <h1>Product Page</h1>
 
             <ProductCard user={user} setPage={setPage} />
-
-            <footer>
-                <p>Trademark of QuickRental Corp.</p>
-            </footer>
-
         </div>
     )
 }
