@@ -1,35 +1,346 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: lightcyan;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: #166a82;
+  --primary-dark: #11425d;
+  --primary-light: #e5f3fb;
+  --page-background: #f2f8fc;
+  --surface: #ffffff;
+  --text-primary: #172b3a;
+  --text-secondary: #5c6b78;
+  --border: #dce8ef;
+  --shadow: 0 8px 28px rgba(17, 66, 93, 0.08);
 }
 
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--page-background);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--primary);
+  transition: color 180ms ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+code,
+pre {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, monospace;
+}
+
+/* SHARED PAGE LAYOUT */
 
 .default {
   min-height: 100vh;
-  padding: 40px;
-  box-sizing: border-box;
-  background-color: lightcyan;
-  color: #222;
+  padding: 56px 40px 80px;
+  background-color: var(--page-background);
+  color: var(--text-primary);
 }
 
-.default h1 {
+.default > h1 {
+  max-width: 1000px;
+  margin: 0 auto 48px;
+  color: var(--primary-dark);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
   text-align: center;
-  margin-bottom: 40px;
+  letter-spacing: -0.035em;
+}
+
+.default h2 {
+  margin: 36px 0 20px;
+  color: var(--primary-dark);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.default h3 {
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .default p {
-  line-height: 1.6;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.default li {
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.default img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* SHARED CONTENT SURFACES */
+
+.default .content,
+.default .page-content {
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.default .card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* FORMS AND INPUTS */
+
+.default input,
+.default select,
+.default textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbdbe5;
+  border-radius: 8px;
+  background: white;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 180ms, box-shadow 180ms;
+}
+
+.default input:focus,
+.default select:focus,
+.default textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(22, 106, 130, 0.13);
+}
+
+.default label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.default input[type="checkbox"],
+.default input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.default input[type="checkbox"],
+.default input[type="radio"],
+.default input[type="file"] {
+  accent-color: var(--primary);
+}
+
+.default textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* BUTTONS */
+
+.default button {
+  padding: 12px 22px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 180ms, transform 180ms, box-shadow 180ms;
+}
+
+.default button:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 5px 14px rgba(17, 66, 93, 0.14);
+}
+
+.default button:active {
+  transform: translateY(1px);
+}
+
+.default button:focus-visible,
+.default a:focus-visible {
+  outline: 3px solid #8cddff;
+  outline-offset: 3px;
+}
+
+.default button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* TABLES */
+
+.default table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.default th,
+.default td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.default th {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 750;
+}
+
+.default tr:last-child td {
+  border-bottom: none;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 768px) {
+  .default {
+    padding: 40px 22px 64px;
+  }
+
+  .default > h1 {
+    margin-bottom: 34px;
+  }
+
+  .default h2 {
+    margin-top: 30px;
+  }
+
+  .default .card {
+    padding: 22px;
+  }
+
+  .default table {
+    font-size: 0.9rem;
+  }
+
+  .default th,
+  .default td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .default {
+    padding: 32px 16px 48px;
+  }
+
+  .default > h1 {
+    font-size: 1.9rem;
+  }
+
+  .default .card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .default button {
+    max-width: 100%;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Preserve Bootstrap button colors */
+.default button.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.default button.btn-danger:hover {
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+  color: white;
+}
+
+.default button.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+.default button.btn-success {
+  background-color: #198754;
+  border-color: #198754;
+  color: white;
+}
+
+.default button.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+/* Keep the footer at the bottom on short pages */
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.default {
+  flex: 1;
 }
