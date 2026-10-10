@@ -7,7 +7,7 @@ function RegisterForm({setUser, setPage}) {
         event.preventDefault()
 
         const API_URL = process.env.REACT_APP_API_URL;
-        let response = await axios.post(`${REACT_APP_API_URL}/users/`, {
+        let response = await axios.post(`${API_URL}/users/`, {
             fname: event.target.fname.value,
             lname: event.target.lname.value,
             uname: event.target.uname.value,

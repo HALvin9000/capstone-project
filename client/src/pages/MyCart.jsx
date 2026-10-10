@@ -14,7 +14,7 @@ function MyCart({user}) {
             try {
                 const API_URL = process.env.REACT_APP_API_URL;
                 const response = await axios.get(
-                    `${REACT_APP_API_URL}/orders/?userId=${user._id}`
+                    `${API_URL}/orders/?userId=${user._id}`
                 )
 
 //                const response = await axios.get(
@@ -33,7 +33,7 @@ function MyCart({user}) {
     async function removeOrder(id) {
         try {
             const API_URL = process.env.REACT_APP_API_URL;
-            await axios.delete(`${REACT_APP_API_URL}/orders/${id}`)
+            await axios.delete(`${API_URL}/orders/${id}`)
 
 //            await axios.delete(`http://localhost:4000/orders/${id}`)
 

@@ -34,7 +34,7 @@ function ChatWidget() {
 //            )
 
             const response = await axios.post(
-                `${REACT_APP_API_URL}/chat`,
+                `${API_URL}/chat`,
                 {
                     message: userMessage
                 }

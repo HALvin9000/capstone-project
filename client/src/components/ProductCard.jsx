@@ -11,7 +11,7 @@ function ProductCard({user, setPage}) {
             try {
                 const API_URL = process.env.REACT_APP_API_URL;
                 const response = await axios.get(
-                    `${REACT_APP_API_URL}/products/`
+                    `${API_URL}/products/`
                 )
 
 //                const response = await axios.get(
@@ -44,7 +44,7 @@ function ProductCard({user, setPage}) {
 //            )
             const API_URL = process.env.REACT_APP_API_URL;
             await axios.post(
-                `${REACT_APP_API_URL}/orders/`,
+                `${API_URL}/orders/`,
                 {
                     productId: product._id,
                     userId: user._id,
