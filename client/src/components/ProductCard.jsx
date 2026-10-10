@@ -9,9 +9,14 @@ function ProductCard({user, setPage}) {
     useEffect(() => {
         async function getProducts() {
             try {
+                const API_URL = process.env.REACT_APP_API_URL;
                 const response = await axios.get(
-                    "http://localhost:4000/products/"
+                    `${REACT_APP_API_URL}/products/`
                 )
+
+//                const response = await axios.get(
+//                    "http://localhost:4000/products/"
+//                )
 
                 setProducts(response.data)
             } catch (error) {
@@ -29,8 +34,17 @@ function ProductCard({user, setPage}) {
         }
 
         try {
+//            await axios.post(
+//                "http://localhost:4000/orders/",
+//                {
+//                    productId: product._id,
+//                    userId: user._id,
+//                    quantity: quantities[product._id] || 1
+//                }
+//            )
+            const API_URL = process.env.REACT_APP_API_URL;
             await axios.post(
-                "http://localhost:4000/orders/",
+                `${REACT_APP_API_URL}/orders/`,
                 {
                     productId: product._id,
                     userId: user._id,

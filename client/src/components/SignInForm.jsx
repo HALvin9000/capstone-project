@@ -7,7 +7,13 @@ function SignInForm({setUser, setPage}) {
         event.preventDefault()
 
         try {
-            let response = await axios.post("http://localhost:4000/users/login", {
+//            let response = await axios.post("http://localhost:4000/users/login", {
+//                uname: event.target.uname.value,
+//                password: event.target.password.value,
+//            })
+            const API_URL = process.env.REACT_APP_API_URL;
+
+            let response = await axios.post(`${REACT_APP_API_URL}/users/login`, {
                 uname: event.target.uname.value,
                 password: event.target.password.value,
             })

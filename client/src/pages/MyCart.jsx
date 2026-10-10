@@ -12,9 +12,14 @@ function MyCart({user}) {
             }
 
             try {
+                const API_URL = process.env.REACT_APP_API_URL;
                 const response = await axios.get(
-                    `http://localhost:4000/orders/?userId=${user._id}`
+                    `${REACT_APP_API_URL}/orders/?userId=${user._id}`
                 )
+
+//                const response = await axios.get(
+//                    `http://localhost:4000/orders/?userId=${user._id}`
+//                )
 
                 setOrders(response.data)
             } catch (error) {
@@ -27,7 +32,10 @@ function MyCart({user}) {
 
     async function removeOrder(id) {
         try {
-            await axios.delete(`http://localhost:4000/orders/${id}`)
+            const API_URL = process.env.REACT_APP_API_URL;
+            await axios.delete(`${REACT_APP_API_URL}/orders/${id}`)
+
+//            await axios.delete(`http://localhost:4000/orders/${id}`)
 
             setOrders((currentOrders) =>
                 currentOrders.filter((order) => order._id !== id)

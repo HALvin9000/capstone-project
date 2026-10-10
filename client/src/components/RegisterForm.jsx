@@ -6,7 +6,8 @@ function RegisterForm({setUser, setPage}) {
     async function handleSubmit(event) {
         event.preventDefault()
 
-        let response = await axios.post("http://localhost:4000/users/", {
+        const API_URL = process.env.REACT_APP_API_URL;
+        let response = await axios.post(`${REACT_APP_API_URL}/users/`, {
             fname: event.target.fname.value,
             lname: event.target.lname.value,
             uname: event.target.uname.value,
@@ -14,6 +15,15 @@ function RegisterForm({setUser, setPage}) {
             email: event.target.email.value,
             age: event.target.age.value
         })
+
+//        let response = await axios.post("http://localhost:4000/users/", {
+//            fname: event.target.fname.value,
+//            lname: event.target.lname.value,
+//            uname: event.target.uname.value,
+//            password: event.target.password.value,
+//           email: event.target.email.value,
+//            age: event.target.age.value
+//        })
 
         console.log(response)
 

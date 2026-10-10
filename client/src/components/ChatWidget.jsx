@@ -25,8 +25,16 @@ function ChatWidget() {
         setText("")
 
         try {
+            const API_URL = process.env.REACT_APP_API_URL;
+//            const response = await axios.post(
+//                "http://localhost:4000/chat",
+//                {
+//                    message: userMessage
+//                }
+//            )
+
             const response = await axios.post(
-                "http://localhost:4000/chat",
+                `${REACT_APP_API_URL}/chat`,
                 {
                     message: userMessage
                 }
