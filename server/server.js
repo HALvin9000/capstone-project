@@ -15,7 +15,10 @@ const anthropic = new Anthropic({
     apiKey: process.env.CLAUDE_API_KEY
 })
 
-server.use(cors("https://capstone-new-frontend.onrender.com"))
+server.use(cors({
+    origin: "https://capstone-new-frontend.onrender.com"
+}))
+
 server.use(express.json())
 
 connectToDB()
