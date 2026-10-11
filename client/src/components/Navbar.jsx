@@ -39,14 +39,6 @@ function Navbar({setPage, user, setUser}) {
         <div className="ms-auto d-flex align-items-center gap-1">
           <a
             className="custom-nav-link text-light"
-            href="#TODO"
-            onClick={() => setPage("TODO")}
-          >
-            TODO
-          </a>
-
-          <a
-            className="custom-nav-link text-light"
             href="#mycart"
             onClick={() => setPage("mycart")}
           >
