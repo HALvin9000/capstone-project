@@ -11,13 +11,32 @@ import Anthropic from '@anthropic-ai/sdk'
 const server = express()
 dotenv.config()
 
-const anthropic = new Anthropic({
-    apiKey: process.env.CLAUDE_API_KEY
-})
+// const anthropic = new Anthropic({
+//     apiKey: process.env.CLAUDE_API_KEY
+// })
 
-server.use(cors({
-    origin: "https://capstone-new-frontend.onrender.com"
-}))
+// server.use(cors({
+//    origin: "https://capstone-new-frontend.onrender.com"
+// }))
+// Allowed origins for development and production
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5173',
+  'https://capstone-new-frontend.onrender.com',
+  'https://capstone-new-backend.onrender.com'
+];
+
+// Middleware
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 
 server.use(express.json())
 
@@ -31,33 +50,33 @@ server.get("/", (req, res) => {
     res.send("This is the server")
 })
 
-server.post("/chat", async (req, res) => {
-    try {
-        const data = await products.find()
+// server.post("/chat", async (req, res) => {
+//    try {
+//        const data = await products.find()
+//
+//        const response = await anthropic.messages.create({
+//            model: "claude-sonnet-4-6",
+//            max_tokens: 500,
+ //           system: `You are the QuickRental AI assistant. Answer questions about the website and products: ${JSON.stringify(data)}`,
+ //           messages: [
+ //               {
+ //                   role: "user",
+ //                   content: req.body.message
+ //               }
+ //           ]
+ //       })
 
-        const response = await anthropic.messages.create({
-            model: "claude-sonnet-4-6",
-            max_tokens: 500,
-            system: `You are the QuickRental AI assistant. Answer questions about the website and products: ${JSON.stringify(data)}`,
-            messages: [
-                {
-                    role: "user",
-                    content: req.body.message
-                }
-            ]
-        })
+ //       res.send({
+   //         message: response.content[0].text
+ //       })
 
-        res.send({
-            message: response.content[0].text
-        })
-
-    } catch (error) {
-        console.error(error)
-        res.status(500).send({
-            message: "Sorry, I couldn't connect to the AI."
-        })
-    }
-})
+//    } catch (error) {
+ //       console.error(error)
+   //     res.status(500).send({
+  //          message: "Sorry, I couldn't connect to the AI."
+ //       })
+ //   }
+// })
 
 const PORT = process.env.PORT || 4000;
 
