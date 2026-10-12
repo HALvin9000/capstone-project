@@ -4,7 +4,7 @@ import connectToDB from './dbConnection.js'
 import usersRouter from './routers/usersRouter.js'
 import productsRouter from './routers/productsRouter.js'
 import ordersRouter from './routers/ordersRouter.js'
-import products from './models/products.js'
+// import products from './models/products.js'
 import dotenv from 'dotenv'
 import Anthropic from '@anthropic-ai/sdk'
 
