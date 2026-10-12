@@ -27,7 +27,7 @@ const allowedOrigins = [
 ];
 
 // Middleware
-app.use(cors({
+server.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
