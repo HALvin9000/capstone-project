@@ -106,6 +106,30 @@ capstone-project/
 
 ## MongoDB Example
 
+### Orders
+```javascript
+{
+  _id: ObjectId('6ac9426c5ffdb90cf78d9b92')
+  productId: ObjectId('6a9fa7806579e7105065d762')
+  userId: ObjectId('012345678910111213141516')
+  quantity: 1
+  expiresAt: ISODate('2026-11-09T20:37:16.738+00:00')
+}
+```
+
+### Products
+```javascript
+{
+  _id: ObjectId('6a9fa7806579e7105065d762')
+  title: "RTX Pro 6000"
+  description: "96GB GDDR7"
+  stock: 14
+  price: 800
+  image: "/img/rtxpro6000.png"
+}
+```
+
+### Users
 ```javascript
 {
   _id: ObjectId('012345678910111213141516'),
