@@ -8,12 +8,12 @@ Each rental covers a one-month rental period, giving customers access to the tec
 
 ## User Stories
 
-As a visitor, I want to browse available technology equipment so that I can find products that fit my needs.
-As a new customer, I want to create an account so that I can access the website's rental features.
-As a registered customer, I want to log in so that I can access my account and manage my rentals.
-As a customer, I want to view the product options and prices so that I can make informed rental decisions.
-As a customer, I want to view my cart and remove items so that I can manage my selected equipment.
-As a visitor, I want to learn about QuickRental so that I understand the purpose of the service and its benefits.
+- **As a visitor**, I want to browse available technology equipment so that I can find products that fit my needs.
+- **As a new customer**, I want to create an account so that I can access the website's rental features.
+- **As a registered customer**, I want to log in so that I can access my account and manage my rentals.
+- **As a customer**, I want to view the product options and prices so that I can make informed rental decisions.
+- **As a customer**, I want to view my cart and remove items so that I can manage my selected equipment.
+- **As a visitor**, I want to learn about QuickRental so that I understand the purpose of the service and its benefits.
 
 ## Technology Stack
 
@@ -106,6 +106,7 @@ capstone-project/
 
 ## MongoDB Example
 
+```javascript
 {
   _id: ObjectId('012345678910111213141516'),
   fname: 'John',
@@ -116,3 +117,4 @@ capstone-project/
   age: NumberInt('20'),
   registeredAt: ISODate('2026-10-06T15:22:36.309Z'),
 }
+```
