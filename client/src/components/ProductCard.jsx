@@ -13,7 +13,7 @@ function ProductCard({user, setPage}) {
                 const response = await axios.get(
                     `${API_URL}/products/`
                 )
-
+console.log (response)
 //                const response = await axios.get(
 //                    "http://localhost:4000/products/"
 //                )
